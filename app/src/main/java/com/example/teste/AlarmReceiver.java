@@ -27,30 +27,6 @@ public class AlarmReceiver extends BroadcastReceiver {
         createNotification(context, "Lembrete de Medicamento", "É hora de tomar o medicamento!");
     }
 
-
-    // Resto do código
-
-/*    public static void setAlarm(Context context, int hourOfDay, int minute) {
-        // Configurar o AlarmManager para disparar a notificação na hora e minuto especificados
-        AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
-        Intent alarmIntent = new Intent(context, Registro_med.class);
-        PendingIntent pendingIntent = PendingIntent.getBroadcast(
-                context,
-                0,
-                alarmIntent,
-                PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_MUTABLE
-        );
-
-        Calendar alarmTime = Calendar.getInstance();
-        alarmTime.set(Calendar.HOUR_OF_DAY, hourOfDay);
-        alarmTime.set(Calendar.MINUTE, minute);
-
-        // Verificar se a hora definida é no futuro
-        if (alarmTime.after(Calendar.getInstance())) {
-            alarmManager.set(AlarmManager.RTC_WAKEUP, alarmTime.getTimeInMillis(), pendingIntent);
-        }
-    }*/
-
     private void createNotification(Context context, String title, String message) {
         // Crie uma intenção para abrir a atividade desejada quando a notificação for clicada
         Intent intent = new Intent(context, ListaMedicamentosActivity.class);
