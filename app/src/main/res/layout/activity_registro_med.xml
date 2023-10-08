@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <TextView
+        android:id="@+id/textViewTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cadastro de Medicamento"
+        android:textSize="30sp"
+        android:textColor="@color/azul_royal"
+        android:fontFamily="@font/fonte_personalizada"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Conteúdo principal da tela (título e outros elementos) aqui -->
+
+        <ImageView
+            android:id="@+id/imageViewBackground"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.2"
+            android:scaleType="centerCrop"
+            android:src="@drawable/logo" /> <!-- Ajuste a transparência como desejado -->
+
+    </FrameLayout>
+
+    <EditText
+        android:id="@+id/editTextNomeMedicamento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nome do Medicamento"
+        android:layout_below="@+id/textViewTitulo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp" />
+
+    <EditText
+        android:id="@+id/editTextDosagem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Dosagem"
+        android:layout_below="@+id/editTextNomeMedicamento"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupDosagem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/editTextDosagem"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp">
+
+        <RadioButton
+            android:id="@+id/radioButtonMl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ML"
+            android:buttonTint="@color/radio_button_selector"/>
+
+        <RadioButton
+            android:id="@+id/radioButtonComprimido"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Comprimido"
+            android:buttonTint="@color/radio_button_selector"/>
+    </RadioGroup>
+
+
+    <EditText
+        android:id="@+id/editTextIntervaloHoras"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Intervalo de Horas"
+        android:layout_below="@+id/radioGroupDosagem"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/editTextQuantidadeDias"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Quantidade de Dias"
+        android:layout_below="@+id/editTextIntervaloHoras"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+
+    <LinearLayout
+        android:id="@+id/linearLayoutDataHora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextIntervaloHoras"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="106dp"
+        >
+
+        <Button
+            android:id="@+id/buttonSelecionarData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/azul_royal"
+            android:textColor="#FFFFFF"
+            android:layout_marginRight="35dp"
+            android:text="Data de Início" />
+
+        <Button
+            android:id="@+id/buttonSelecionarHora"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/azul_royal"
+            android:textColor="#FFFFFF"
+            android:text="Hora Inicial" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonSalvar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Salvar"
+        android:background="#ff0000"
+        android:textColor="#FFFFFF"
+        android:layout_below="@+id/linearLayoutDataHora"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="65dp" />
+
+    <Button
+        android:id="@+id/buttonMostrarHorarios"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mostrar Lista Cadastrada"
+        android:layout_below="@+id/buttonSalvar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+
+</RelativeLayout>

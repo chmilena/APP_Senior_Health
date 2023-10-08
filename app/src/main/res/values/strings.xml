@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Senior Health</string>
+    <string-array name="unidades_dosagem">
+        <item>ml</item>
+        <item>Comprimido</item>
+    </string-array>
+</resources>
